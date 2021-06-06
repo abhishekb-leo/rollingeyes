@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Mouse Position</title>
+<style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 25%;
+            height: 35%;
+        }
+        p {text-align: center;}
+</style>
+</head>
+<body>
+    <div>
+        <img id="rollingeyes" src="r1.jpg" class="center">
+    </div>
+    <p id="position">[X Position] [Y Position]
+    <script>
+        document.addEventListener("click",function(event){
+            var x = event.clientX;
+            var y = event.clientY;
+            document.getElementById('position').innerHTML = "[ X  ="+ x + "] [ Y ="+ y+" ]";
+            if(x>200 &&x<300){
+                document.getElementById('rollingeyes').src="r2.jpg";
+            }
+            else if(x>300 && x<400){
+                document.getElementById('rollingeyes').src="r3.jpg";    
+            }
+            else if (x>400 && x<700){
+                document.getElementById('rollingeyes').src="r4.jpg";
+            }
+            else if(x>700 && x<900){
+                document.getElementById('rollingeyes').src="r5.jpg";
+            }
+            else if(x>900 && x<1200){
+                document.getElementById('rollingeyes').src="r6.jpg";
+            }
+            else{
+                document.getElementById('rollingeyes').src="r1.jpg";
+            }
+        });
+
+        document.getElementById("rollingeyes").addEventListener("mouseover", mouseOver);
+        document.getElementById("rollingeyes").addEventListener("mouseout", mouseOut);
+
+        function mouseOver() {
+            document.getElementById("rollingeyes").remove;
+        }
+
+        function mouseOut() {
+        document.getElementById("rollingeyes").style.color = "black";
+        }
+
+
+
+    </script>
+    </p>
+</body>
+</html>
