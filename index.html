@@ -20,12 +20,12 @@
     <div>
         <img id="rollingeyes" src="r1.jpg" class="center">
     </div>
-    <p id="position">[X Position] [Y Position]
+    <p id="pos">[X Position] [Y Position]
     <script>
         document.addEventListener("click",function(event){
             var x = event.clientX;
             var y = event.clientY;
-            document.getElementById('position').innerHTML = "[ X  ="+ x + "] [ Y ="+ y+" ]";
+            document.getElementById('pos').innerHTML = "[ X  ="+ x + "] [ Y ="+ y+" ]";
             if(x>200 &&x<300){
                 document.getElementById('rollingeyes').src="r2.jpg";
             }
