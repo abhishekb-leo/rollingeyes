@@ -17,7 +17,7 @@
     height: 100px;
     background-color: red;
     animation-name: example;
-    animation-duration: 4s;
+    animation-duration: 8s;
     }
         .center {
             display: block;
@@ -30,8 +30,8 @@
 </style>
 </head>
 <body>
-    <div>
-        <img id="rollingeyes" src="r1.jpg" class="center">
+    <div class="center">
+        <img id="rollingeyes" src="r1.jpg">
     </div>
     <p id="pos">[X Position] [Y Position]
     <script>
@@ -58,17 +58,18 @@
                 document.getElementById('rollingeyes').src="r1.jpg";
             }
         });
-
+/*
         document.getElementById("rollingeyes").addEventListener("mouseover", mouseOver);
         document.getElementById("rollingeyes").addEventListener("mouseout", mouseOut);
 
         function mouseOver() {
-            	document.getElementById("rollingeyes").animate();
+            	document.getElementById("rollingeyes").animate(example.example)
         }
 
         function mouseOut() {
         	document.getElementById("rollingeyes").style.color = "black";
         }
+*/
     </script>
     </p>
 </body>
